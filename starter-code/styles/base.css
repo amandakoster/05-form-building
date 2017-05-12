@@ -45,4 +45,6 @@ a:visited {
 
 /*FORM STYLES
 =======================================*/
-/*TODO: Add the CSS needed to style the form*/
+lable {
+  display: block;
+}

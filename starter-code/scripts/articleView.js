@@ -74,7 +74,8 @@ articleView.setTeasers = function() {
 };
 
 articleView.initNewArticlePage = function() {
-  // TODO: Ensure the main .tab-content area is revealed. We might add more tabs later or otherwise edit the tab navigation.
+  // TODO: Ensure the main .tab-content area is revealed. We might add more tabs later or otherwise edit the tab navigation. DONE
+  $('.tab-content').show();
 
 
   // TODO: The new articles we create will be copy/pasted into our source data file.
@@ -91,7 +92,7 @@ articleView.initNewArticlePage = function() {
 articleView.create = function() {
   // TODO: Set up a var to hold the new article we are creating.
   // Clear out the #articles element, so we can put in the updated preview
-
+var =
 
   // TODO: Instantiate an article based on what's in the form fields:
 
@@ -107,7 +108,7 @@ articleView.create = function() {
 };
 
 
-articleView.initIndexPage = function() {
+articleView.initIndexPage = function() { //all functions are being called here when doc loads
   articleView.populateFilters();
   articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
