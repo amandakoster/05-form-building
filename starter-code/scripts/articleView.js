@@ -86,6 +86,9 @@ articleView.initNewArticlePage = function() {
   });
 
   // TODO: Add an event handler to update the preview and the export field if any inputs change.
+
+  // listenToWhat, listenForWhat, doWhat
+  $('#new-form').on('change', articleView.create);
 //Event listener: listenToWhat, listenForWhat, doWhat
   $('#new-form')
 };
@@ -97,6 +100,14 @@ articleView.create = function() {
   $('#articles').empty();
 
   // TODO: Instantiate an article based on what's in the form fields:
+  article = new Article({
+    author: $('#article-author').val(),
+    authorUrl: $('#article-author-url').val(),
+    title: $('#article-title').val(),
+    category: $('#article-category').val(),
+    body: $('#article-body').val(),
+    publishedOn: $('#article-published:checked').length ? new Date() : null
+  });
   var article = new Article({
     author : $('#article-author').val(),
     authorUrl : $('#article-author-url').val(),
@@ -115,10 +126,13 @@ articleView.create = function() {
   // TODO: Activate the highlighting of any code blocks; look at the documentation for hljs to see how to do this by placing a callback function in the .each():
   $('pre code').each();
 
+  // TODO: Show our export field, and export the new article as JSON, so it's ready to copy/paste ("Thanks, Larry!!!") into blogArticles.js:
+  $('#export-field').show();
+  $('#article-json').val(JSON.stringify(article) + ',');
+
   // TODO: Show our export field, and export the new article as JSON, so it's ready to copy/paste into blogArticles.js:
   $('#export-field').show();
   $('#article-json').val(JSON.stringify(article) + ',');// .val to get stuff in and out of <inputs>
-
 };
 
 
