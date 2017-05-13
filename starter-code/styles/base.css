@@ -18,8 +18,6 @@ hr {
   width: 80%;
 }
 
-/*TEXT STYLES
-=======================================*/
 p {
   font-size: 1em;
 }
@@ -28,8 +26,6 @@ address {
   display: inline-block;
 }
 
-/*LINK STYLES
-=======================================*/
 
 a, a:link, a:active {
   text-decoration: none;
@@ -45,16 +41,15 @@ a:visited {
 
 /*FORM STYLES
 =======================================*/
-/*TODO: Add the CSS needed to style the form*/
 
 label {
-  font-size: 3em;
+  font-size: 1em;
 }
 
 input {
   width: 100%;
   margin: .5em 0;
-  border: 1px solid #ccc;
+  border: 1px solid color #A9A9A9;
   border-width: 0 0 1px 0;
   border-radius: 0;
 }
@@ -66,15 +61,32 @@ input[type="checkbox"] {
 }
 
 textarea {
+  font-size: 1em;
+}
+
+input [type="text"] {
+  font-size: 1em;
+}
+
+.required{
+    color:red;
+}
+
+::placeholder {
+  color: #C0C0C0;
+  font-style: italic;
+}
+
+textarea {
   width: 100%;
   margin: .5em 0;
-  font-size: 2em;
+  font-size: .5em;
   border: 1px solid #ccc;
   border-radius: 0;
 }
 
 input:invalid, textarea:invalid {
-  border-color: #AE3F3C;
+  border-color: #C0C0C0`;
 }
 
 input:valid, textarea:valid {
