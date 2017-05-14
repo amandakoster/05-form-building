@@ -16,9 +16,6 @@ Article.prototype.toHtml = function() {
 
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
   this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
-  //teplate literal - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-
-  // TODO (stretch goal): Pass the article body into the marked.js library to format our Markdown input!
 
   return template(this);
 };
