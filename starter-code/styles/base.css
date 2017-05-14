@@ -49,15 +49,54 @@ label {
 input {
   width: 100%;
   margin: .5em 0;
-  border: 1px solid color #A9A9A9;
+  border: 1px solid color #32b532;
   border-width: 0 0 1px 0;
   border-radius: 0;
+}
+
+::placeholder {
+  color: black;
+  font-size: 1em;
 }
 
 input[type="checkbox"] {
   width: .28em;
   height: .28em;
   font-size: 3em;
+  cursor: pointer;
+  background: #eee;
+  border:1px solid #ddd;
+}
+
+.checkbox label:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 6px;
+	left: 7px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+}
+
+#article-published label:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 6px;
+	left: 7px;
+	border: 3px solid #333;
+}
+
+#article-published input[type=checkbox]:checked + label:after {
+	opacity: 1;
 }
 
 textarea {
@@ -68,27 +107,21 @@ input [type="text"] {
   font-size: 1em;
 }
 
-.required{
-    color:red;
-}
-
-::placeholder {
-  color: #C0C0C0;
-  font-style: italic;
-}
-
 textarea {
   width: 100%;
   margin: .5em 0;
   font-size: .5em;
-  border: 1px solid #ccc;
+  border: 1px solid #32b532;
   border-radius: 0;
 }
 
 input:invalid, textarea:invalid {
-  border-color: #C0C0C0`;
+  border-color: #32b532;
 }
 
 input:valid, textarea:valid {
-  border-color: #89CB8E;
+  border-color: #32b532;
+
+label {
+  display: block;
 }
